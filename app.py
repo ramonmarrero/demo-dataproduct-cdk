@@ -6,6 +6,9 @@ from dataproduct.dataproduct_stack import DataproductStack
 
 
 app = core.App()
-DataproductStack(app, "dataproduct")
+
+env_EU = core.Environment(account="447450868602", region="eu-central-1")
+
+DataproductStack(app, "dataproduct",  env=env_EU)
 
 app.synth()
